@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.td_5{
+	width:7%;
+}
+.td_20{
+	width:13%;
+}
+.td_80{
+	width:95%;
+}
+.info_submit{
+	text-align:right;
+}
+.span_select .select{
+	/*width:166px;
+	width:153px \9;*/
+}
+.submit{
+	margin-right:10px;
+}
+.span_textarea .textarea,.span_text_err .text, .span_textarea_err .textarea{
+	height:100px;
+}
+

@@ -1,0 +1,29 @@
+.c_table tr td,th{text-align:center}
+.form_table2 tr .txt_r{width:6%;}
+.c_table .tr_te{;background:#eaf2fa}
+	.c_table .tr_te label{margin-right:14px}
+	.form_table td .submit2{margin-left:6%}
+	.form_table td .submit3{margin-left:7%}
+	.form_table td .submit4{margin-left:8.4%}
+	.form_table td .submit5{margin-left:10.4%}
+	.form_table td .submit6{margin-left:23%}
+	.form_table td .submit7{margin-left:2%}
+	.form_table td .text1{position:relative;}
+	.form_table .r_td{text-align:center}
+		.form_table td .text1 img{position:absolute;right:4px;top:4px;}
+.form_table3 .td_5{width:2%;}
+.form_table3 .td_6{width:1%;}
+.c_table td a{margin-right:8px;text-decoration:none;}
+.l_th{text-align:left}
+.c_span{display:inline-block;width:13%}
+.form_table .t_td{overflow:hidden;_zoom:1;}
+	.form_table .t_td .ww{float:left;margin-top:5px;padding-right:4%}
+	.form_table .t_td .submit{float:left;}
+.t_ma{padding-top:12px}
+.file_label{position:relative;display:inline-block;height:35px;width:80px;overflow:hidden;}
+	.file_label .file2{position:absolute;right:8px;height:30px;filter:alpha(opacity=0);-moz-opacity:0;opacity:0;}
+	.file_label .submit{position:absolute;top:0px;right:0px;}
+.submit_f{float:left}
+.liu{text-align:center}
+.ff5900_em{color:#ff5900}
+.td_r{text-align:right}
