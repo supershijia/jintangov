@@ -1,34 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>融合后台</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/global.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/myWorkPlace.css" media="screen" rel="stylesheet" type="text/css" />
-    <!--[if !IE 7]>
-            <style type="text/css">
-                    #wrap {display:table;height:100%}
-            </style>
-    <![endif]-->
-    <script src="/javascripts/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="/javascripts/jquery.contentTab.js" type="text/javascript"></script>
-    <script src="/javascripts/main.js" type="text/javascript"></script>
-  </head>
-  <body class="body_box">
-    <div class="wrap" id="wrap">
-      <div class="main" id="main">
-        <%= render :partial => "layouts/forehead" %>
+<head>
+  <title>融合后台</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/global.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/stylesheets/myWorkPlace.css" media="screen" rel="stylesheet" type="text/css"/>
+  <!--[if !IE 7]>
+  <style type="text/css">
+      #wrap {
+          display: table;
+          height: 100%
+      }
+  </style>
+  <![endif]-->
+  <script src="/javascripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="/javascripts/jquery.contentTab.js" type="text/javascript"></script>
+  <script src="/javascripts/main.js" type="text/javascript"></script>
+</head>
+<body class="body_box">
+<div class="wrap" id="wrap">
+  <div class="main" id="main">
+    <%= render :partial => "layouts/forehead" %>
 
-        <!--中间部分-->
-        <div class="body_cont">
-          <%=  yield %>
-        </div>
-        
-      </div>
+    <!--中间部分-->
+    <div class="body_cont">
+      <%= yield %>
     </div>
-    
-    <%=  render :partial => "layouts/forefoot" %>
-  </body>
+
+  </div>
+</div>
+
+<%= render :partial => "layouts/forefoot" %>
+</body>
 </html>

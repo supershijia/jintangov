@@ -26,7 +26,7 @@ class Admin::HomeController < ApplicationController
   end
 
   def show
-    
+
   end
 
 end

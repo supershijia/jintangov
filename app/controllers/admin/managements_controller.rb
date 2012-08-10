@@ -9,6 +9,7 @@ class Admin::ManagementsController < ApplicationController
   def user_mgm
 
   end
+
   #部门管理
   def dep_mgm
 
@@ -23,9 +24,10 @@ class Admin::ManagementsController < ApplicationController
   def attr_mgm
 
   end
+
   #用户日志
   def log_mgm
-    
+
   end
 
   def new

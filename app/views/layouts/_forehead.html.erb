@@ -1,16 +1,21 @@
 <!--头部LOGOstart-->
 <div class="head_cont">
-    <h1 title="Ronghee 融合软件">Ronghee 融合软件</h1>
-    <div class="user_cont"><div class="user_name">当前用户：michaellee23</div></div>
-    <div class="logout_cont"><div class="logout"><a href="####">[安全退出]</a></div></div>
+  <h1 title="Ronghee 融合软件">Ronghee 融合软件</h1>
+
+  <div class="user_cont">
+    <div class="user_name">当前用户：michaellee23</div>
+  </div>
+  <div class="logout_cont">
+    <div class="logout"><a href="####">[安全退出]</a></div>
+  </div>
 </div>
 <!--头部LOGOend-->
-	
+
 <!--头部导航栏start-->
 <div class="nav_cont">
   <ul class="nav_l" id="nav">
     <li class="hide_left"><span>点击隐藏</span></li>
-    <li><%= link_to "资讯信息", {:controller => "informations", :action => "index"}, {:title => "资讯信息",:class => "hov"} %></li>
+    <li><%= link_to "资讯信息", {:controller => "informations", :action => "index"}, {:title => "资讯信息", :class => "hov"} %></li>
     <li><%= link_to "系统管理", {:controller => "managements", :action => "index"}, {:title => "系统管理"} %></li>
   </ul>
 </div>
