@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   has_many :links
   has_many :videos
 
-  attr_accessible :login_name, :name, :password, :dept_id, :last_login_time, :last_login_ip
+  acts_as_authentic
+
+  attr_accessor :password_confirmation,:persistence_token
+  attr_accessible :login_name, :name, :password,:password_confirmation, :dept_id, :last_login_time, :last_login_ip
 
 end

@@ -2,7 +2,12 @@ Jintangov::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  root :to => 'admin/home#index'
+  root :to => 'home#index'
+
+  get "login", :controller => "user_sessions", :action => "new"
+  get "logout", :controller => "user_sessions", :action => "destroy"
+  resources :user_sessions
+  resources :users
 
   namespace :admin do
     resource :home
@@ -15,6 +20,7 @@ Jintangov::Application.routes.draw do
         get 'log_mgm'
       end
     end
+
     resources :informations do
        collection do
          get 'pic_info'

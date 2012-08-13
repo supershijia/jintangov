@@ -1,4 +1,5 @@
 class Admin::InformationsController < ApplicationController
+  layout 'main'
 
   # GET /admin/information
   # GET /admin/information.json
