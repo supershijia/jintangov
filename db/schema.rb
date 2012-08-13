@@ -25,15 +25,15 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.integer  "auditer_id"
     t.datetime "audittime"
     t.integer  "counter"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "articles_resources", :force => true do |t|
     t.integer  "article_id"
     t.integer  "resource_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "articles_resources", ["article_id"], :name => "index_articles_resources_on_article_id"
@@ -45,15 +45,15 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.string   "detailcode"
     t.string   "detailname"
     t.string   "attr"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "depts", :force => true do |t|
     t.string   "name"
     t.string   "code"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "files", :force => true do |t|
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.integer  "auditer_id"
     t.datetime "audittime"
     t.integer  "counter"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "images", :force => true do |t|
@@ -79,15 +79,15 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.string   "img_path"
     t.string   "url"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "images_resources", :force => true do |t|
     t.integer  "image_id"
     t.integer  "resource_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "images_resources", ["image_id"], :name => "index_images_resources_on_image_id"
@@ -98,36 +98,36 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.string   "img_path"
     t.string   "url"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "permissions", :force => true do |t|
     t.integer  "resource_id"
     t.string   "authority"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "resources", :force => true do |t|
     t.string   "name"
     t.string   "code"
     t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles_permissions", :id => false, :force => true do |t|
     t.integer  "role_id"
     t.integer  "permission_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "roles_permissions", ["permission_id"], :name => "index_roles_permissions_on_permission_id"
@@ -140,15 +140,15 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.integer  "dept_id"
     t.datetime "last_login_time"
     t.string   "last_login_ip"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users_roles", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users_roles", ["role_id"], :name => "index_users_roles_on_role_id"
@@ -161,8 +161,8 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
     t.string   "category_id"
     t.integer  "user_id"
     t.integer  "counter"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
