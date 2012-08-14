@@ -1,15 +1,12 @@
 #Encoding:utf-8
+#资讯面版
 class Admin::InfosController < ApplicationController
   layout 'main'
 
-  # GET /admin/information
-  # GET /admin/information.json
   def index
 
   end
 
-  # GET /admin/information/new
-  # GET /admin/information/new.json
   def new
 
   end
@@ -34,25 +31,18 @@ class Admin::InfosController < ApplicationController
 
   end
 
-  # GET /admin/information/1/edit
   def edit
 
   end
 
-  # POST /admin/information
-  # POST /admin/information.json
   def create
 
   end
 
-  # PUT /admin/information/1
-  # PUT /admin/information/1.json
   def update
 
   end
 
-  # DELETE /admin/information/1
-  # DELETE /admin/information/1.json
   def destroy
 
   end

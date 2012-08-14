@@ -11,7 +11,7 @@ Jintangov::Application.routes.draw do
 
   namespace :admin do
     resource :home
-    resources :managements do
+    resources :boards do
       collection do
         get 'user_mgm'
         get 'dep_mgm'

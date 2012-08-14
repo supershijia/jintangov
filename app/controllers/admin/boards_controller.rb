@@ -1,5 +1,6 @@
 #encoding: utf-8
-class Admin::ManagementsController < ApplicationController
+#管理面版
+class Admin::BoardsController < ApplicationController
   layout 'main'
 
   def index
