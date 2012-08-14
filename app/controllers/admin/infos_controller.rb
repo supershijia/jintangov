@@ -1,4 +1,5 @@
-class Admin::InformationsController < ApplicationController
+#Encoding:utf-8
+class Admin::InfosController < ApplicationController
   layout 'main'
 
   # GET /admin/information

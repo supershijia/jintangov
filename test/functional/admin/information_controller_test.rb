@@ -17,7 +17,7 @@ class Admin::InformationControllerTest < ActionController::TestCase
   end
 
   test "should create admin_information" do
-    assert_difference('Admin::Information.count') do
+    assert_difference('Admin::Info.count') do
       post :create, admin_information: {  }
     end
 
@@ -40,7 +40,7 @@ class Admin::InformationControllerTest < ActionController::TestCase
   end
 
   test "should destroy admin_information" do
-    assert_difference('Admin::Information.count', -1) do
+    assert_difference('Admin::Info.count', -1) do
       delete :destroy, id: @admin_information
     end
 

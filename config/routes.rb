@@ -21,7 +21,7 @@ Jintangov::Application.routes.draw do
       end
     end
 
-    resources :informations do
+    resources :infos do
        collection do
          get 'pic_info'
          get 'video_info'
