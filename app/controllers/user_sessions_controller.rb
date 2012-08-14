@@ -16,6 +16,7 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
+        p UserSession.find
         format.html { redirect_to('/admin/informations', :notice => 'Login Successful') }
         format.xml { render :xml => @user_session, :status => :created, :location => @user_session }
       else
@@ -28,12 +29,9 @@ class UserSessionsController < ApplicationController
   # DELETE /user_sessions/1
   # DELETE /user_sessions/1.xml
   def destroy
-    @user_session = UserSession.find
-    @user_session.destroy
+    UserSession.find.destroy
+    session.clear
 
-    respond_to do |format|
-      format.html { redirect_to(:users, :notice => 'Goodbye!') }
-      format.xml { head :ok }
-    end
+    redirect_to root_url
   end
 end

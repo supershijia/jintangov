@@ -1,14 +1,14 @@
 <%= form_for @user_session do |f| %>
-<h1>后台登录</h1>
-<p>
-<%= f.label '用户名：', :class=>"username" %>
-<%= f.text_field :login_name ,:class=>"usertext",:id=>"login" %>
-</p>
-<p>
-<%= f.label '密   码：', :class=>"username" %>
-<%= f.password_field :password ,:class=>"usertext"%>
-</p>
+    <h1>后台登录</h1>
+    <p>
+      <%= f.label '用户名：', :class => "username" %>
+      <%= f.text_field :login_name, :class => "usertext", :id => "login" %>
+    </p>
+    <p>
+      <%= f.label '密   码：', :class => "username" %>
+      <%= f.password_field :password, :class => "usertext" %>
+    </p>
 
-<p><%= f.submit '登录',:class=>"userbutton" %></p>
-<p><span class="leftuser"></span></p>
+    <p><%= f.submit '登录', :class => "userbutton" %></p>
+    <p><span class="leftuser"></span></p>
 <% end %>
