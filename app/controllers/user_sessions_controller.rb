@@ -1,9 +1,4 @@
 class UserSessionsController < ApplicationController
-
-  def index
-
-  end
-
   def new
     @user_session = UserSession.new
   end
@@ -11,7 +6,8 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      redirect_to user_url
+      flash[:notice] = "Login successful!"
+      redirect_to '/admin/informations'    #设置登录后的地址
     else
       render :action => :new
     end
@@ -19,6 +15,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    redirect_to new_user_session_url
+    flash[:notice] = "Logout successful!"
+    redirect_to '/login'
   end
 end

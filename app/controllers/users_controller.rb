@@ -7,14 +7,10 @@ class UsersController  < ApplicationController
 
   def create
     @user = User.new(params[:user])
-
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to new_user_session_path, notice: '注册成功' }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      redirect_to root_path
+    else
+      redirect_to(:action=>'new')
     end
   end
 

@@ -134,14 +134,14 @@ ActiveRecord::Schema.define(:version => 20120812034031) do
   add_index "roles_permissions", ["role_id"], :name => "index_roles_permissions_on_role_id"
 
   create_table "users", :force => true do |t|
-    t.string   "login_name",        :null => false
-    t.string   "name",              :null => false
-    t.string   "crypted_password",  :null => false
-    t.string   "password_salt",     :null => false
-    t.integer  "dept_id",           :null => false
+    t.string   "login_name",        :default => "", :null => false
+    t.string   "name",              :default => "", :null => false
+    t.string   "crypted_password",  :default => "", :null => false
+    t.string   "password_salt",     :default => "", :null => false
+    t.integer  "dept_id",                           :null => false
     t.datetime "last_login_time"
     t.string   "last_login_ip"
-    t.string   "persistence_token", :null => false
+    t.string   "persistence_token", :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

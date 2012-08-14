@@ -3,7 +3,12 @@
   <h1 title="Ronghee 融合软件">Ronghee 融合软件</h1>
 
   <div class="user_cont">
-    <div class="user_name">当前用户：michaellee23</div>
+    <div class="user_name">当前用户：
+      <%if session[:current_user]%>
+          欢迎您，<%=session[:current_user].username%>&nbsp;
+          <%=  link_to "退出",:controller => "muserLogs",:action=>"logout" %>
+      <%end%>
+    </div>
   </div>
   <div class="logout_cont">
     <div class="logout"><a href="####">[安全退出]</a></div>
