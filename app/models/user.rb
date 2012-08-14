@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     c.login_field = :login_name
   end
 
-  attr_accessor :password_confirmation,:persistence_token
+  attr_accessor :password_confirmation
   attr_accessible :login_name, :name, :password,:password_confirmation, :dept_id, :last_login_time, :last_login_ip
 
 end

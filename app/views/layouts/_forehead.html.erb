@@ -4,23 +4,17 @@
 
   <div class="user_cont">
     <div class="user_name">当前用户：
-
-
-      <div id="nav">
         <% if current_user %>
-            <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
-            <%= link_to "Logout", :logout%>
-        <% else %>
-            <%= link_to "Register", new_user_path%> |
-            <%= link_to "Login", :login %>
+            <%= current_user.name %>
         <% end %>
-      </div>
-
-
     </div>
   </div>
   <div class="logout_cont">
-    <div class="logout"><a href="####">[安全退出]</a></div>
+    <div class="logout">
+      <% if current_user %>
+        <%= link_to "安全退出",:logout %>
+      <% end %>
+    </div>
   </div>
 </div>
 <!--头部LOGOend-->
