@@ -1,8 +1,8 @@
 <div class="left_cont">
   <div class="side_bar">
     <ul class="side_l">
-      <li class="current"><%= link_to "用户管理", {:controller => "boards", :action => "user_mgm"}, {:title => "用户管理"} %></li>
-      <li><%= link_to "部门管理", {:controller => "boards", :action => "dep_mgm"}, {:title => "部门管理"} %></li>
+      <li class="current"><%= link_to "用户管理", admin_user_mgms_path, {:title => "用户管理"} %></li>
+      <li><%= link_to "部门管理",admin_dep_mgms_path , {:title => "部门管理"} %></li>
       <li><%= link_to "角色管理", {:controller => "boards", :action => "role_mgm"}, {:title => "角色管理"} %></li>
       <li><%= link_to "属性设置", {:controller => "boards", :action => "attr_mgm"}, {:title => "属性设置"} %></li>
       <li><%= link_to "用户日志", {:controller => "boards", :action => "log_mgm"}, {:title => "用户日志"} %></li>

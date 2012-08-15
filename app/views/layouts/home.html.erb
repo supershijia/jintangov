@@ -22,13 +22,11 @@
 <body class="body_box">
 <div class="wrap" id="wrap">
   <div class="main" id="main">
-
-     <div id="user_nav"><%= link_to "注册", "login" %> | <%= link_to "登陆", new_user_session_path %></div>
+    <div id="user_nav"><%= link_to "注册", new_user_path %> | <%= link_to "登陆", "login" %></div>
     <!--中间部分-->
     <div class="body_cont">
       <%= yield %>
     </div>
-
   </div>
 </div>
 

@@ -11,10 +11,10 @@ Jintangov::Application.routes.draw do
 
   namespace :admin do
     resource :home
+    resources :user_mgms
+    resources :dep_mgms
     resources :boards do
       collection do
-        get 'user_mgm'
-        get 'dep_mgm'
         get 'role_mgm'
         get 'attr_mgm'
         get 'log_mgm'
