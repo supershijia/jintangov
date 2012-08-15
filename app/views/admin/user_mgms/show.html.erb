@@ -1,0 +1,31 @@
+<!--右侧区域start-->
+<div class="right_cont">
+  <div class="content">
+    <!--功能信息展示区start-->
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>姓名：</b>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <b>部门：</b>
+      <%= @user.dept.name %>
+    </p>
+
+    <p>
+      <b>登陆名:</b>
+      <%= @user.login_name %>
+    </p>
+
+
+    <%= link_to '编辑', edit_admin_user_mgm_path(@user) %> |
+    <%= link_to '返回', admin_user_mgms_path %>
+    <!--功能信息展示区end-->
+  </div>
+</div>
+<!--右侧区域end-->
+
+<!--左边菜单区域-->
+<%= left_menu_boards %>

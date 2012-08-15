@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def left_menu_boards     #系统管理左边栏
-    left_menu([["/admin/user_mgms","用户管理"],["/admin/dep_mgms","部门管理"],["/admin/role_mgms","角色管理"],["/admin/attr_mgms","属性设置"],["/admin/log_mgms","用户日志"]])
+    left_menu([["/admin/user_mgms","用户管理"],["/admin/dept_mgms","部门管理"],["/admin/role_mgms","角色管理"],["/admin/attr_mgms","属性设置"],["/admin/log_mgms","用户日志"]])
   end
 
 end

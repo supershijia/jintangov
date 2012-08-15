@@ -1,0 +1,27 @@
+<%= form_for @dept, :url => {:controller => "admin/dept_mgms" ,:action => "create" } do |f| %>
+    <% if @dept.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@dept.errors.count, "error") %> prohibited this dept from being saved:</h2>
+
+          <ul>
+            <% @dept.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label "部门名称：" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label "部门代码：" %>
+      <%= f.text_field :code %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit value="提交" %>
+    </div>
+<% end %>

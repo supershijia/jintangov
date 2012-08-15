@@ -13,7 +13,7 @@ class Admin::UserMgmsController < ApplicationController
     @user = User.new
   end
 
-  # GET /posts/1/edit
+
   def edit
     @user = User.find(params[:id])
   end
@@ -23,7 +23,7 @@ class Admin::UserMgmsController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to admin_user_mgms_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -37,7 +37,7 @@ class Admin::UserMgmsController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to admin_user_mgms_path, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -51,7 +51,7 @@ class Admin::UserMgmsController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_url }
+      format.html { redirect_to admin_user_mgms_url }
       format.json { head :no_content }
     end
   end

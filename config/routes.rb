@@ -12,7 +12,7 @@ Jintangov::Application.routes.draw do
   namespace :admin do
     resource :home
     resources :user_mgms
-    resources :dep_mgms
+    resources :dept_mgms
     resources :boards do
       collection do
         get 'role_mgm'
