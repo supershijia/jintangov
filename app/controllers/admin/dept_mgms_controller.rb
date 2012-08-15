@@ -6,49 +6,49 @@ class Admin::DeptMgmsController < ApplicationController
   end
 
   def show
-    @depts = Dept.find(params[:id])
+    @dept = Dept.find(params[:id])
   end
 
   def new
-    @depts = Dept.new
+    @dept = Dept.new
   end
 
 
   def edit
-    @depts = Dept.find(params[:id])
+    @dept = Dept.find(params[:id])
   end
 
   def create
-    @depts = Dept.new(params[:dept])
+    @dept = Dept.new(params[:dept])
 
     respond_to do |format|
-      if @depts.save
+      if @dept.save
         format.html { redirect_to admin_dept_mgms_path, notice: 'dept was successfully created.' }
-        format.json { render json: @depts, status: :created, location: @depts }
+        format.json { render json: @dept, status: :created, location: @depts }
       else
         format.html { render action: "new" }
-        format.json { render json: @depts.errors, status: :unprocessable_entity }
+        format.json { render json: @dept.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def update
-    @depts = Dept.find(params[:id])
+    @dept = Dept.find(params[:id])
 
     respond_to do |format|
-      if @depts.update_attributes(params[:dept])
+      if @dept.update_attributes(params[:dept])
         format.html { redirect_to admin_dept_mgms_path, notice: 'Dept was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @depts.errors, status: :unprocessable_entity }
+        format.json { render json: @dept.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
-    @depts = Dept.find(params[:id])
-    @depts.destroy
+    @dept = Dept.find(params[:id])
+    @dept.destroy
 
     respond_to do |format|
       format.html { redirect_to admin_dept_mgms_url }
