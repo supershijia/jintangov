@@ -1,0 +1,2 @@
+module Admin::DepMgmsHelper
+end
