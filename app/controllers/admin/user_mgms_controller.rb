@@ -50,9 +50,6 @@ class Admin::UserMgmsController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to admin_user_mgms_url }
-      format.json { head :no_content }
-    end
+    respond_with(@user,:location=>:back)
   end
 end

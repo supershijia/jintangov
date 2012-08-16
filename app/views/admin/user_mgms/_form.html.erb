@@ -1,5 +1,4 @@
-<% @user.new? ? a="create" : a="update" %>
-<%= form_for @user, :url => {:controller => "admin/user_mgms" ,:action => "#{a}" } do |f| %>
+<%= form_for @user, :url => {:controller => "admin/user_mgms" ,:action => "#{@user.new_record? ? "create" : "update"}" } do |f| %>
     <% if @user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
