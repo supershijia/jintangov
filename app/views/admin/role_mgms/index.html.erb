@@ -6,27 +6,25 @@
       <div class="bd_top">
         <div class="bd_tl"></div>
         <div class="bd_tr"></div>
-        <h3>部门信息</h3>
+        <h3>角色信息</h3>
         <div class="control_cont control_cont2">
-          <%= link_to '新建部门', new_admin_dept_mgm_path %>
+          <%= link_to '新建角色', new_admin_role_mgm_path %>
         </div>
       </div>
       <div class="bd_cont" style="height:400px">
         <table>
           <tr>
-            <th>姓名</th>
-            <th>编码</th>
+            <th>角色名称</th>
             <th>操作</th>
           </tr>
 
-          <% @depts.each do |dept| %>
+          <% @roles.each do |role| %>
               <tr>
-                <td><%= dept.name %></td>
-                <td><%= dept.code %></td>
+                <td><%= role.name %></td>
                 <td>
-                    <%= link_to '显示', admin_dept_mgm_path(dept) %>  |
-                    <%= link_to '编辑', edit_admin_dept_mgm_path(dept) %>  |
-                    <%= link_to '删除',admin_dept_mgm_path(dept),:confirm=>'确定删除吗?',:method=>:delete %>
+                  <%= link_to '显示', admin_role_mgm_path(role) %>  |
+                  <%= link_to '编辑', edit_admin_role_mgm_path(role) %>  |
+                  <%= link_to '删除',admin_role_mgm_path(role),:confirm=>'确定删除吗?',:method=>:delete %>
                 </td>
               </tr>
           <% end %>

@@ -7,18 +7,16 @@ Jintangov::Application.routes.draw do
   get "login", :controller => "user_sessions", :action => "new"
   get "logout", :controller => "user_sessions", :action => "destroy"
   resources :user_sessions
-  resources :users
-  resources :depts
 
   namespace :admin do
     resource :home
     resources :user_mgms
     resources :dept_mgms
+    resources :role_mgms
+    resources :attr_mgms
+    resources :log_mgms
     resources :boards do
       collection do
-        get 'role_mgm'
-        get 'attr_mgm'
-        get 'log_mgm'
       end
     end
 

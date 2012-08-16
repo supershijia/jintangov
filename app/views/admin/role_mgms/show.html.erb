@@ -6,17 +6,11 @@
 
     <p>
       <b>部门名称：</b>
-      <%= @dept.name %>
+      <%= @role.name %>
     </p>
 
-    <p>
-      <b>部门代码：</b>
-      <%= @dept.code %>
-    </p>
-
-
-    <%= link_to '编辑', edit_admin_dept_mgm_path(@dept) %> |
-    <%= link_to '返回', admin_dept_mgms_path %>
+    <%= link_to '编辑', edit_admin_role_mgm_path(@role) %> |
+    <%= link_to '返回', admin_role_mgms_path %>
     <!--功能信息展示区end-->
   </div>
 </div>
