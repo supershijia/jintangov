@@ -1,0 +1,42 @@
+<%= form_for @attr, :url => {:controller => "admin/attr_mgms" ,:action => "#{@attr.new_record? ? "create" : "update"}" } do |f| %>
+    <% if @attr.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@attr.errors.count, "error") %> prohibited this dept from being saved:</h2>
+
+          <ul>
+            <% @attr.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label "类别编码：" %>
+      <%= f.text_field :typecode %>
+    </div>
+
+    <div class="field">
+      <%= f.label "类别名称：" %>
+      <%= f.text_field :typename %>
+    </div>
+
+    <div class="field">
+      <%= f.label "明细编码：" %>
+      <%= f.text_field :detailcode %>
+    </div>
+
+    <div class="field">
+      <%= f.label "明细名称：" %>
+      <%= f.text_field :detailname %>
+    </div>
+
+    <div class="field">
+      <%= f.label "属性值：" %>
+      <%= f.text_field :attr %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit value="提交" %>
+    </div>
+<% end %>

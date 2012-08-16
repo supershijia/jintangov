@@ -1,0 +1,48 @@
+<!--右侧区域start-->
+<div class="right_cont">
+  <div class="content">
+    <!--功能信息展示区start-->
+    <div class="bd">
+      <div class="bd_top">
+        <div class="bd_tl"></div>
+        <div class="bd_tr"></div>
+        <h3>属性信息</h3>
+        <div class="control_cont control_cont2">
+          <%= link_to '新建属性', new_admin_attr_mgm_path %>
+        </div>
+      </div>
+      <div class="bd_cont" style="height:400px">
+        <table>
+          <tr>
+            <th>类别编码</th>
+            <th>类别名称</th>
+            <th>明细编码</th>
+            <th>明细名称</th>
+            <th>属性值</th>
+            <th>操作</th>
+          </tr>
+
+          <% @attrs.each do |attr| %>
+              <tr>
+                <td><%= attr.typecode %></td>
+                <td><%= attr.typename %></td>
+                <td><%= attr.detailcode %></td>
+                <td><%= attr.detailname %></td>
+                <td><%= attr.attr %></td>
+                <td>
+                    <%= link_to '显示', admin_attr_mgm_path(attr) %>  |
+                    <%= link_to '编辑', edit_admin_attr_mgm_path(attr) %>  |
+                    <%= link_to '删除',admin_attr_mgm_path(attr),:confirm=>'确定删除吗?',:method=>:delete %>
+                </td>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+    <!--功能信息展示区end-->
+  </div>
+</div>
+<!--右侧区域end-->
+
+<!--左边菜单区域-->
+<%= left_menu_boards %>
