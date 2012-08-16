@@ -1,4 +1,5 @@
 class Admin::DeptMgmsController < ApplicationController
+  respond_to :html, :xml, :json
   layout 'main'
 
   def index
@@ -50,9 +51,6 @@ class Admin::DeptMgmsController < ApplicationController
     @dept = Dept.find(params[:id])
     @dept.destroy
 
-    respond_to do |format|
-      format.html { redirect_to admin_dept_mgms_url }
-      format.json { head :no_content }
-    end
+    redirect_to admin_dept_mgms_path
   end
 end

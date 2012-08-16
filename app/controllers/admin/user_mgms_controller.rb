@@ -50,6 +50,7 @@ class Admin::UserMgmsController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
 
-    respond_with(@user,:location=>:back)
+    #respond_with(@user,:location=>:back
+    redirect_to admin_user_mgms_path
   end
 end

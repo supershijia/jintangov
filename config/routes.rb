@@ -8,6 +8,7 @@ Jintangov::Application.routes.draw do
   get "logout", :controller => "user_sessions", :action => "destroy"
   resources :user_sessions
   resources :users
+  resources :depts
 
   namespace :admin do
     resource :home
